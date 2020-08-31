@@ -37,6 +37,11 @@ public class QueriesResource {
 		
 	}
 	
+	@GetMapping("/allquery")
+	public List<Query> getAll(){
+		return queryService.findAll();
+	}
+	
 	@PutMapping("/users/{username}/queries/{id}")
 	public ResponseEntity<Query>  updateQuery(@PathVariable String username,@PathVariable long id,@RequestBody Query query){
 		Query queryUpdated = queryService.save(query);

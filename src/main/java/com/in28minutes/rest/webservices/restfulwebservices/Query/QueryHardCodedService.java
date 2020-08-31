@@ -15,6 +15,15 @@ public class QueryHardCodedService {
 	static {
 		queries.add(new Query(++idCounter,"shubham","Java can be used in server side programming",new Date()));
 		queries.add(new Query(++idCounter,"shubham","Problem solving can be done better in which programming language.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow567.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"sameeer","Is Queries Elucidator better than StackOverFlow 123.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"sameer","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
 		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
 		queries.add(new Query(++idCounter,"sameer","Is Queries Elucidator better than StackOverFlow.",new Date()));
 		
