@@ -11,21 +11,16 @@ import org.springframework.stereotype.Service;
 public class QueryHardCodedService {
 
 	private static List<Query> queries=new ArrayList();
+	private static List<String> categoryList= new ArrayList();
 	private static int idCounter=0;
 	static {
-		queries.add(new Query(++idCounter,"shubham","Java can be used in server side programming",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Problem solving can be done better in which programming language.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow567.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"sameeer","Is Queries Elucidator better than StackOverFlow 123.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"sameer","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"shubham","Is Queries Elucidator better than StackOverFlow.",new Date()));
-		queries.add(new Query(++idCounter,"sameer","Is Queries Elucidator better than StackOverFlow.",new Date()));
+		categoryList.add("java");
+		categoryList.add("python");
+
+		categoryList.add("C++");
+		categoryList.add("C#");
+		queries.add(new Query(++idCounter,"shubham","Why is java not working with react","sasta description",categoryList,new Date()));
+		
 		
 	}
 	
@@ -36,12 +31,12 @@ public class QueryHardCodedService {
 	public Query save(Query query) {
 		if(query.getId()==-1 || query.getId()==0) {
 			query.setId(++idCounter);
-			query.setQueryDate(new Date());
+			query.setDate(new Date());
 			queries.add(query);
 		}
 		else {
 			deleteById(query.getId());
-			query.setQueryDate(new Date());
+			query.setDate(new Date());
 			queries.add(query);
 		}
 		return query;

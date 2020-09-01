@@ -1,28 +1,33 @@
 package com.in28minutes.rest.webservices.restfulwebservices.Query;
 
 import java.util.Date;
+import java.util.List;
 
 public class Query {
-	private long qid;
+	private long id;
 	private String username;
-	private String que;
-	private Date queryDate;
+	private String title;
+	private Date date;
+	private String description;
+	private List<String> categoryList; 
 	
 	public Query() {
 		
 	}
-	public Query(long id, String username, String que, Date queryDate) {
+	public Query(long id, String username, String title, String description,List <String> categoryList,Date date) {
 		
-		this.qid = id;
+		this.id = id;
 		this.username = username;
-		this.que = que;
-		this.queryDate = queryDate;
+		this.title = title;
+		this.description = description;
+		this.categoryList=categoryList;
+		this.date=date;
 	}
 	public long getId() {
-		return qid;
+		return id;
 	}
 	public void setId(long id) {
-		this.qid = id;
+		this.id = id;
 	}
 	public String getUsername() {
 		return username;
@@ -30,23 +35,36 @@ public class Query {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getQuestion() {
-		return que;
+	
+	public String getTitle() {
+		return title;
 	}
-	public void setQuestion(String question) {
-		this.que = question;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public Date getQuerytDate() {
-		return queryDate;
+	public Date getDate() {
+		return date;
 	}
-	public void setQueryDate(Date querydate) {
-		this.queryDate = querydate;
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public List<String> getCategoryList() {
+		return categoryList;
+	}
+	public void setCategoryList(List<String> categoryList) {
+		this.categoryList = categoryList;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (int) (qid ^ (qid >>> 32));
+		result = prime * result + (int) (id ^ (id >>> 32));
 		return result;
 	}
 	@Override
@@ -58,7 +76,7 @@ public class Query {
 		if (getClass() != obj.getClass())
 			return false;
 		Query other = (Query) obj;
-		if (qid != other.qid)
+		if (id != other.id)
 			return false;
 		return true;
 	}
